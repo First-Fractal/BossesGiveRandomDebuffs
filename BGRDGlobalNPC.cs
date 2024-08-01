@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -9,8 +10,8 @@ namespace BossesGiveRandomDebuffs
     {
         public override void OnHitPlayer(NPC npc, Player target, Player.HurtInfo hurtInfo)
         {
-            //check if the current npc is a boss
-            if (npc.boss)
+            //check if the current npc is a boss or a boss part or a boss minion
+            if (npc.boss || ffVar.Bosses.BossParts.Contains(npc.type) || ffVar.Bosses.BossMinions.Contains(npc.type))
             {
                 //get a random buff from the list
                 int randomBuffID = Main.rand.Next(1, BGRDSystem.debuffs.Count - 1);

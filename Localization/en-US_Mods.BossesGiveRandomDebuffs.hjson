@@ -1,1 +1,5 @@
-
+BuffInfo: {
+	Vanilla: Vanilla
+	Modded: Modded
+	Message: ({0} Buff)
+}

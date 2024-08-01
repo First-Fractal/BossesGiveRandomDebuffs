@@ -10,15 +10,23 @@ namespace BossesGiveRandomDebuffs
 {
     public class ffVar
     {
-        //list of all the boss parts
-        public static int[] BossParts = { NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody, NPCID.EaterofWorldsTail, NPCID.Creeper,
-            NPCID.SkeletronHand, NPCID.WallofFleshEye, NPCID.TheDestroyer, NPCID.TheDestroyerBody, NPCID.TheDestroyerTail, NPCID.PrimeCannon, NPCID.PrimeLaser, NPCID.PrimeSaw, NPCID.PrimeVice, NPCID.PlanterasHook, NPCID.PlanterasTentacle,
-            NPCID.GolemFistLeft, NPCID.GolemFistRight, NPCID.GolemHead, NPCID.GolemHeadFree, NPCID.CultistBossClone, NPCID.MoonLordCore,
-            NPCID.MoonLordHand, NPCID.MoonLordHead, NPCID.MoonLordFreeEye, NPCID.MoonLordLeechBlob };
+        public class Bosses
+        {
+            //list of all the boss parts
+            public static int[] BossParts = { NPCID.EaterofWorldsHead, NPCID.EaterofWorldsBody, NPCID.EaterofWorldsTail,
+                NPCID.SkeletronHand, NPCID.WallofFleshEye, NPCID.TheDestroyer, NPCID.TheDestroyerBody, NPCID.TheDestroyerTail, NPCID.PrimeCannon, NPCID.PrimeLaser, NPCID.PrimeSaw, NPCID.PrimeVice, NPCID.PlanterasHook, NPCID.PlanterasTentacle,
+                NPCID.GolemFistLeft, NPCID.GolemFistRight, NPCID.GolemHead, NPCID.GolemHeadFree, NPCID.CultistBossClone, NPCID.MoonLordCore,
+                NPCID.MoonLordHand, NPCID.MoonLordHead, NPCID.MoonLordFreeEye, NPCID.MoonLordLeechBlob };
 
-        public static int[] MiniBosses = {NPCID.BloodNautilus, NPCID.DD2DarkMageT1, NPCID.DD2DarkMageT3, NPCID.DD2OgreT2, NPCID.DD2OgreT3, NPCID.DD2Betsy,
-            NPCID.PirateShip, NPCID.MourningWood, NPCID.Pumpking, NPCID.Everscream, NPCID.SantaNK1, NPCID.IceQueen, NPCID.MartianSaucer,
-            NPCID.LunarTowerSolar, NPCID.LunarTowerVortex, NPCID.LunarTowerNebula, NPCID.LunarTowerStardust};
+            //list of all the boss minions
+            public static int[] BossMinions = {NPCID.SlimeSpiked, NPCID.ServantofCthulhu, NPCID.Creeper,  NPCID.Bee, NPCID.TheHungry, NPCID.TheHungryII, NPCID.LeechHead, NPCID.LeechBody, NPCID.LeechTail, NPCID.QueenSlimeMinionBlue, NPCID.QueenSlimeMinionPink, NPCID.QueenSlimeMinionPurple, NPCID.Probe, NPCID.Spore, NPCID.Sharkron, NPCID.Sharkron2, NPCID.CultistDragonHead, NPCID.CultistDragonBody2, NPCID.CultistDragonBody3, NPCID.CultistDragonBody4, NPCID.CultistDragonTail, NPCID.AncientCultistSquidhead};
+
+            //list of all the mini bosses
+            public static int[] MiniBosses = {NPCID.BloodNautilus, NPCID.DD2DarkMageT1, NPCID.DD2DarkMageT3, NPCID.DD2OgreT2, NPCID.DD2OgreT3, NPCID.DD2Betsy,
+                NPCID.PirateShip, NPCID.MourningWood, NPCID.Pumpking, NPCID.Everscream, NPCID.SantaNK1, NPCID.IceQueen, NPCID.MartianSaucer,
+                NPCID.LunarTowerSolar, NPCID.LunarTowerVortex, NPCID.LunarTowerNebula, NPCID.LunarTowerStardust};
+        }
+
 
         public class Slimes
         {
@@ -384,7 +392,6 @@ namespace BossesGiveRandomDebuffs
                 NPCID.EnchantedSword, NPCID.BigMimicHallow, NPCID.DesertGhoulHallow, NPCID.PigronHallow};
         }
 
-
         public class MiniBiomes
         {
             public static int[] granite = { NPCID.GraniteGolem, NPCID.GraniteFlyer };
@@ -492,7 +499,7 @@ namespace BossesGiveRandomDebuffs
                 else
                 {
                     //loop through each part of the boss parts
-                    foreach (int part in ffVar.BossParts)
+                    foreach (int part in ffVar.Bosses.BossParts)
                     {
                         //check if the npc is alive and is a part of a boss
                         if (npc.active && npc.type == part)
