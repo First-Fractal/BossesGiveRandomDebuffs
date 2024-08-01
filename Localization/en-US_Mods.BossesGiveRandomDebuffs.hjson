@@ -29,5 +29,13 @@ Configs: {
 			Label: Debuff Time Maximum
 			Tooltip: The maximum time range that the debuff should last for.
 		}
+
+		BuffBlocklist: {
+			Label: Debuff Blocklist
+			Tooltip: '''
+						A list of debuffs that shoudn't be allowed to be given to the player when attacked.
+						The number value is the buff ID.
+					 '''
+		}
 	}
 }

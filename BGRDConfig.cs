@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using Terraria.ID;
 using Terraria.ModLoader.Config;
 
 namespace BossesGiveRandomDebuffs
@@ -34,5 +36,12 @@ namespace BossesGiveRandomDebuffs
         [DefaultValue(120)]
         [Range(0, 99999)]
         public int DebuffTimeMax;
+
+        //define the list of buffs that should be blocked
+        public HashSet<int> BuffBlocklist = new()
+        {
+            BuffID.Werewolf, BuffID.Merfolk, BuffID.Campfire, BuffID.HeartLamp, BuffID.Wet, BuffID.Lovestruck, 
+            BuffID.Stinky, BuffID.Slimed, BuffID.Sunflower, BuffID.MonsterBanner, BuffID.CatBast, BuffID.GelBalloonBuff, BuffID.BrainOfConfusionBuff, BuffID.NeutralHunger
+        };
     }
 }
