@@ -3,3 +3,31 @@ BuffInfo: {
 	Modded: Modded
 	Message: ({0} Buff)
 }
+
+Configs: {
+	Header.GeneralOptions: General Options
+
+	BGRDConfig: {
+		DisplayName: Bosses Give Random Debuffs Config
+
+		BossMinions: {
+			Label: Boss Minions
+			Tooltip: Should boss minions give the debuffs?
+		}
+
+		DebuffChance: {
+			Label: Debuff Chance
+			Tooltip: The chance, in percentage, of the boss giving the debuff.
+		}
+
+		DebuffTimeMin: {
+			Label: Debuff Time Minimum
+			Tooltip: The minimum time range that the debuff should last for.
+		}
+
+		DebuffTimeMax: {
+			Label: Debuff Time Maximum
+			Tooltip: The maximum time range that the debuff should last for.
+		}
+	}
+}
