@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 using System.Linq;
 
 //this is my own libary that I use to store snipits. I don't want it to be it's own mod, so I'll use copy and paste this file when needed.
-namespace INSERT_NEW_NAMESPACE_HERE
+namespace BossesGiveRandomDebuffs
 {
     public class ffVar
     {
