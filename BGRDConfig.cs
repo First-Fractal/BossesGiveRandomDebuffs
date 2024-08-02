@@ -21,6 +21,10 @@ namespace BossesGiveRandomDebuffs
         [DefaultValue(true)]
         public bool BossMinions;
 
+        //define the config value for boss projectiles giving debuffs
+        [DefaultValue(true)]
+        public bool BossProjectiles;
+
         //define the config value for the chance of getting the debuff
         [DefaultValue(50)]
         [Slider()]
@@ -33,7 +37,7 @@ namespace BossesGiveRandomDebuffs
         public int DebuffTimeMin;
 
         //define the config value for boss minions giving debuffs
-        [DefaultValue(120)]
+        [DefaultValue(90)]
         [Range(0, 99999)]
         public int DebuffTimeMax;
 

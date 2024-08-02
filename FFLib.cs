@@ -4,6 +4,7 @@ using Terraria.Chat;
 using Terraria.Localization;
 using Microsoft.Xna.Framework;
 using System.Linq;
+using System;
 
 //this is my own libary that I use to store snipits. I don't want it to be it's own mod, so I'll use copy and paste this file when needed.
 namespace BossesGiveRandomDebuffs
@@ -19,7 +20,10 @@ namespace BossesGiveRandomDebuffs
                 NPCID.MoonLordHand, NPCID.MoonLordHead, NPCID.MoonLordFreeEye, NPCID.MoonLordLeechBlob };
 
             //list of all the boss minions
-            public static int[] BossMinions = {NPCID.SlimeSpiked, NPCID.ServantofCthulhu, NPCID.Creeper,  NPCID.Bee, NPCID.TheHungry, NPCID.TheHungryII, NPCID.LeechHead, NPCID.LeechBody, NPCID.LeechTail, NPCID.QueenSlimeMinionBlue, NPCID.QueenSlimeMinionPink, NPCID.QueenSlimeMinionPurple, NPCID.Probe, NPCID.Spore, NPCID.Sharkron, NPCID.Sharkron2, NPCID.CultistDragonHead, NPCID.CultistDragonBody2, NPCID.CultistDragonBody3, NPCID.CultistDragonBody4, NPCID.CultistDragonTail, NPCID.AncientCultistSquidhead};
+            public static int[] BossMinions = {NPCID.SlimeSpiked, NPCID.ServantofCthulhu, NPCID.VileSpitEaterOfWorlds, NPCID.Creeper,  NPCID.Bee, NPCID.TheHungry, NPCID.TheHungryII, NPCID.LeechHead, NPCID.LeechBody, NPCID.LeechTail, NPCID.QueenSlimeMinionBlue, NPCID.QueenSlimeMinionPink, NPCID.QueenSlimeMinionPurple, NPCID.Probe, NPCID.Spore, NPCID.Sharkron, NPCID.Sharkron2, NPCID.CultistDragonHead, NPCID.CultistDragonBody2, NPCID.CultistDragonBody3, NPCID.CultistDragonBody4, NPCID.CultistDragonTail, NPCID.AncientCultistSquidhead};
+            
+            //list of all the boss minions
+            public static int[] BossProjectiles = { ProjectileID.QueenBeeStinger, ProjectileID.Skull, ProjectileID.DeerclopsIceSpike, ProjectileID.DeerclopsRangedProjectile, ProjectileID.InsanityShadowHostile, ProjectileID.EyeLaser, ProjectileID.QueenSlimeSmash, ProjectileID.QueenSlimeGelAttack, ProjectileID.DeathLaser, ProjectileID.EyeFire, ProjectileID.BombSkeletronPrime, ProjectileID.SeedPlantera, ProjectileID.PoisonSeedPlantera, ProjectileID.ThornBall, ProjectileID.Fireball, ProjectileID.EyeBeam, ProjectileID.Sharknado, ProjectileID.SharknadoBolt, ProjectileID.Cthulunado, ProjectileID.HallowBossDeathAurora, ProjectileID.FairyQueenSunDance, ProjectileID.HallowBossLastingRainbow, ProjectileID.HallowBossRainbowStreak, ProjectileID.HallowBossSplitShotCore, ProjectileID.FairyQueenLance, ProjectileID.FairyQueenHymn, ProjectileID.CultistBossFireBall, ProjectileID.CultistBossFireBallClone, ProjectileID.CultistBossIceMist, ProjectileID.CultistBossLightningOrb, ProjectileID.CultistBossLightningOrbArc, ProjectileID.PhantasmalEye, ProjectileID.PhantasmalSphere, ProjectileID.PhantasmalDeathray, ProjectileID.MoonLeech, ProjectileID.PhantasmalBolt, ProjectileID.MoonBoulder };
 
             //list of all the mini bosses
             public static int[] MiniBosses = {NPCID.BloodNautilus, NPCID.DD2DarkMageT1, NPCID.DD2DarkMageT3, NPCID.DD2OgreT2, NPCID.DD2OgreT3, NPCID.DD2Betsy,
