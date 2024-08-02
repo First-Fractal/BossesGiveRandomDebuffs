@@ -1,3 +1,3 @@
-displayName = BossesGiveRandomDebuffs
+displayName = Bosses Give Random Debuffs
 author = First Fractal
-version = 0.1
+version = 1.0
