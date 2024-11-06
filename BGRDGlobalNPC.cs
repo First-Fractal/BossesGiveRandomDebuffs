@@ -12,7 +12,8 @@ namespace BossesGiveRandomDebuffs
         public override void OnHitPlayer(NPC npc, Player target, Player.HurtInfo hurtInfo)
         {
             //check if the current npc is a boss or a boss part or a boss minion if allowed
-            if (npc.boss || ffVar.Bosses.BossParts.Contains(npc.type) || (BGRDConfig.Instance.BossMinions && ffVar.Bosses.BossMinions.Contains(npc.type)))
+            if 
+                ((npc.boss || ffVar.Bosses.BossParts.Contains(npc.type)) || (BGRDConfig.Instance.BossMinions && ffVar.Bosses.BossMinions.Contains(npc.type) && ffFunc.IsBossAlive()))
             {
                 //give the player a random debuff
                 BossesGiveRandomDebuffs.GiveRandomDebuff(target);
