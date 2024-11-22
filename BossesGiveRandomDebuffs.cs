@@ -30,8 +30,8 @@ namespace BossesGiveRandomDebuffs
                     //grab the random buff from the allowed list
                     randomBuffID = BGRDSystem.debuffs[randomBuffID];
 
-                    //check to see if the buff id isnt in the blacklist, and stop the loop
-                    if (!BGRDConfig.Instance.BuffBlocklist.Contains(randomBuffID)) correctDebuff = true;
+                    //check to see if the buff id isnt in the blacklist, and the player isnt immune to it, and stop the loop
+                    if (!BGRDConfig.Instance.BuffBlocklist.Contains(randomBuffID) && target.buffImmune[randomBuffID] == false) correctDebuff = true;
                 }
 
                 //apply the buff
