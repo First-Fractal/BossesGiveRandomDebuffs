@@ -11,7 +11,7 @@ namespace BossesGiveRandomDebuffs
 		public static void GiveRandomDebuff(Player target)
 		{
             //make it have a 50% chance to apply it
-            if (Main.rand.Next(0, 101) <= BGRDConfig.Instance.DebuffChance)
+            if (Main.rand.Next(1, 101) <= BGRDConfig.Instance.DebuffChance)
             {
                 //bool to check if the current buff isnt a blacklist
                 bool correctDebuff = false;
